@@ -208,9 +208,11 @@ layers configuration. You are free to put any user code."
   (spacemacs/toggle-fill-column-indicator-on)
 
   ;; Set extra bindings for exiting insert mode.
-  (define-key evil-insert-state-map "§" 'evil-force-normal-state)
-  ;; This bind is needed for making C-RET exit insert mode
-  (define-key evil-insert-state-map (kbd "C-@") 'evil-force-normal-state)
+  (define-key key-translation-map "§" (kbd "<escape>"))
+  )
+
+(defun dotspacemacs/config ()
+  (add-hook 'alchemist-mode 'company-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -230,7 +232,3 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  )
 
-
-(defun dotspacemacs/config ()
-  (add-hook 'alchemist-mode 'company-mode)
-  )

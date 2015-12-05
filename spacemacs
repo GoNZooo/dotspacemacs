@@ -206,10 +206,12 @@ layers configuration. You are free to put any user code."
   (spacemacs/toggle-line-numbers-on)
   (spacemacs/toggle-auto-fill-mode-on)
   (spacemacs/toggle-fill-column-indicator-on)
+  (spacemacs/toggle-centered-point-globally-on)
 
   ;; Set extra bindings for exiting insert mode.
   (define-key key-translation-map "§" (kbd "<escape>"))
-  (define-key evil-org-mode-map (kbd "C-c TAB") 'org-cycle)
+  ;; (define-key evil-org-mode-map (kbd "C-c TAB") 'org-cycle)
+  ;; (evil-leader/set-key-for-mode 'evil-org-mode (kbd "C-c TAB") 'org-cycle)
   )
 
 (defun dotspacemacs/config ()

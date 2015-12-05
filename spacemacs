@@ -209,6 +209,7 @@ layers configuration. You are free to put any user code."
 
   ;; Set extra bindings for exiting insert mode.
   (define-key key-translation-map "§" (kbd "<escape>"))
+  (define-key evil-org-mode-map (kbd "C-c TAB") 'org-cycle)
   )
 
 (defun dotspacemacs/config ()

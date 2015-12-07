@@ -28,12 +28,8 @@ values."
      syntax-checking
      auto-completion
      company-mode
-     erlang
-     elixir
-     racket
      git
      dash
-     html
      org
      colors
      editorconfig
@@ -41,6 +37,24 @@ values."
      perspectives
      dockerfile
      yaml
+     elixir
+     racket
+     erlang
+     go
+     haskell
+     html
+     java
+     lua
+     ocaml
+     ruby
+     rust
+     scheme
+     shell-scripts
+     sql
+     c-c++
+     clojure
+     common-lisp
+     python
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -85,10 +99,23 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         wilson
-                         tronesque
+                         jazz
+                         molokai
+                         seti
+                         soft-charcoal
+                         stekene-dark
+                         subatomic256
+                         hickey
+                         lush
+                         gotham
                          naquadah
+                         tronesque
+                         wilson
                          spacemacs-dark
+                         pastels-on-dark
+                         twilight
+                         sanityinc-tomorrow-eighties
+                         sanityinc-tomorrow-night
                          )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -151,10 +178,10 @@ values."
    dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
-   dotspacemacs-fullscreen-use-non-native nil
+   dotspacemacs-fullscreen-use-non-native t
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
@@ -168,7 +195,7 @@ values."
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
    dotspacemacs-inactive-transparency 90
    ;; If non nil unicode symbols are displayed in the mode line. (default t)
-   dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-unicode-symbols nil
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters the
    ;; point when it reaches the top or bottom of the screen. (default t)
@@ -206,11 +233,13 @@ layers configuration. You are free to put any user code."
   (spacemacs/toggle-line-numbers-on)
   (spacemacs/toggle-auto-fill-mode-on)
   (spacemacs/toggle-fill-column-indicator-on)
-  (spacemacs/toggle-centered-point-globally-on)
+  (linum-relative-global-mode)
+  (spacemacs/toggle-golden-ratio-on)
 
   ;; Set extra bindings for exiting insert mode.
   (define-key key-translation-map "§" (kbd "<escape>"))
   (evil-define-key 'normal evil-org-mode-map (kbd "C-c TAB") 'org-cycle)
+  (setq org-agenda-files (file-expand-wildcards "~/todo/*.org"))
   )
 
 (defun dotspacemacs/config ()

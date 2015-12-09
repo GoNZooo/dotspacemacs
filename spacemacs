@@ -99,6 +99,8 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         sanityinc-tomorrow-night
+                         sanityinc-tomorrow-eighties
                          molokai
                          seti
                          jazz
@@ -114,8 +116,6 @@ values."
                          spacemacs-dark
                          pastels-on-dark
                          twilight
-                         sanityinc-tomorrow-eighties
-                         sanityinc-tomorrow-night
                          )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t

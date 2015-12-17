@@ -99,6 +99,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         soft-charcoal
                          twilight
                          gotham
                          sanityinc-tomorrow-night
@@ -106,7 +107,6 @@ values."
                          molokai
                          seti
                          jazz
-                         soft-charcoal
                          stekene-dark
                          subatomic256
                          hickey
@@ -255,11 +255,14 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "0ec59d997a305e938d9ec8f63263a8fc12e17990aafc36ff3aff9bc5c5a202f0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default))))
+    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "0ec59d997a305e938d9ec8f63263a8fc12e17990aafc36ff3aff9bc5c5a202f0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(magit-push-arguments nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:background nil))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
 

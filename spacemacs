@@ -100,12 +100,12 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          stekene-dark
+                         molokai
                          twilight
                          soft-charcoal
                          gotham
                          sanityinc-tomorrow-night
                          sanityinc-tomorrow-eighties
-                         molokai
                          seti
                          jazz
                          subatomic256

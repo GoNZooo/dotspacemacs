@@ -99,13 +99,13 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         reverse
                          cyberpunk
                          monokai
                          grandshell
                          material
                          flatland
                          obsidian
-                         reverse
                          smyx
                          tangotango
                          dakrone
@@ -131,8 +131,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Ubuntu Mono"
-                               :size 13
+
+   ;; The below lines do not matter, as spacemacs apparently has no
+   ;; regard for these settings at all. They're pointless.
+   dotspacemacs-default-font '("Iosevka Medium"
+                               :size 14.0
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -219,7 +222,7 @@ values."
    dotspacemacs-highlight-delimiters 'all
    ;; If non nil advises quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server 'yes
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))

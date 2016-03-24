@@ -38,6 +38,7 @@ values."
      dockerfile
      yaml
      elixir
+     elm
      racket
      erlang
      go
@@ -247,7 +248,6 @@ layers configuration. You are free to put any user code."
   (spacemacs/toggle-auto-fill-mode-on)
   (spacemacs/toggle-fill-column-indicator-on)
   (linum-relative-global-mode)
-  (spacemacs/toggle-golden-ratio-on)
 
   ;; Set extra bindings for exiting insert mode.
   (define-key key-translation-map "§" (kbd "<escape>"))

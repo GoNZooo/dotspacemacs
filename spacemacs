@@ -102,6 +102,8 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ample-zen
+                         ample
+                         ample-flat
                          monokai
                          omtose-phellack
                          purple-haze

@@ -101,6 +101,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         monochrome
                          ample-zen
                          ample
                          ample-flat
@@ -141,7 +142,7 @@ values."
 
    ;; The below lines do not matter, as spacemacs apparently has no
    ;; regard for these settings at all. They're pointless.
-   dotspacemacs-default-font '("Iosevka Medium"
+   dotspacemacs-default-font '("Hasklig"
                                :size 14.0
                                :weight normal
                                :width normal

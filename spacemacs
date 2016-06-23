@@ -101,6 +101,10 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         clues
+                         jbeans
+                         ujelly
+                         monokai
                          spacemacs-dark
                          gruber-darker
                          majapahit-dark
@@ -109,7 +113,6 @@ values."
                          ample-zen
                          ample
                          ample-flat
-                         monokai
                          omtose-phellack
                          purple-haze
                          grandshell
@@ -145,8 +148,8 @@ values."
 
    ;; The below lines do not matter, as spacemacs apparently has no
    ;; regard for these settings at all. They're pointless.
-   dotspacemacs-default-font '("Hasklig"
-                               :size 14.0
+   dotspacemacs-default-font '("Ubuntu Mono"
+                               :size 13.0
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -184,7 +187,7 @@ values."
    dotspacemacs-helm-no-header nil
    ;; define the position to display `helm', options are `bottom', `top',
    ;; `left', or `right'. (default 'bottom)
-   dotspacemacs-helm-position 'bottom
+   dotspacemacs-helm-position 'right
    ;; If non nil the paste micro-state is enabled. When enabled pressing `p`
    ;; several times cycle between the kill ring content. (default nil)
    dotspacemacs-enable-paste-micro-state nil
@@ -248,6 +251,8 @@ values."
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
+  (set-face-attribute 'default nil :family "Iosevka")
+  (set-face-attribute 'default nil :height 140)
   )
 
 (defun dotspacemacs/user-config ()
@@ -267,6 +272,7 @@ layers configuration. You are free to put any user code."
 
 (defun dotspacemacs/config ()
   (add-hook 'alchemist-mode 'company-mode)
+  ;(add-hook 'erlang-mode 'company-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
